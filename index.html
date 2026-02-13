@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collins & Co. | Bespoke Staircase Design & Craftsmanship</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #B5945F;
+            --off-white: #FFFBF1;
+            --charcoal: #2D2D2D;
+            --white: #FFFFFF;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Lato', sans-serif;
+            background-color: var(--off-white);
+            scroll-behavior: smooth;
+        }
+
+        /* --- LANDING PAGE 1: Full-Screen Impact --- */
+        .hero-container {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+        }
+
+        #bg-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            filter: brightness(0.6); /* Darkens video so white text is readable */
+        }
+
+        /* Floating Navigation like Bisca */
+        header {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            padding: 40px 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .logo-text {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            letter-spacing: 4px;
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin: 0 15px;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 2.5px;
+            font-weight: 400;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3.8rem;
+            margin: 0;
+            font-weight: 400;
+            letter-spacing: 5px;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-top: 10px;
+            font-weight: 300;
+        }
+
+        .scroll-down {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        /* --- LANDING PAGE 2: Tailored About Content --- */
+        .about-section {
+            padding: 120px 10%;
+            text-align: center;
+            background-color: var(--off-white);
+            color: var(--charcoal);
+        }
+
+        .about-section h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+            color: var(--charcoal);
+        }
+
+        .gold-divider {
+            width: 70px;
+            height: 2px;
+            background-color: var(--gold);
+            margin: 0 auto 40px;
+        }
+
+        .about-content {
+            max-width: 850px;
+            margin: 0 auto;
+            line-height: 2;
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        .about-content strong {
+            font-weight: 700;
+            color: var(--gold);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.5rem; }
+            header { flex-direction: column; padding: 20px 0; }
+            nav { margin-top: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo-text">COLLINS & CO.</a>
+        <nav>
+            <a href="#">Bespoke Gallery</a>
+            <a href="#">The Process</a>
+            <a href="#">Our Story</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero-container">
+        <video autoplay muted loop playsinline id="bg-video">
+            <source src="your-staircase-masterpiece.mp4" type="video/mp4">
+        </video>
+        
+        <div class="hero-content">
+            <h1>Sculpting Elevation</h1>
+            <p>Architectural Staircase Design & Craftsmanship</p>
+        </div>
+
+        <div class="scroll-down" onclick="document.getElementById('about').scrollIntoView();">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+            </svg>
+        </div>
+    </section>
+
+    <section class="about-section" id="about">
+        <h2>Refining the Art of the Staircase</h2>
+        <div class="gold-divider"></div>
+        
+        <div class="about-content">
+            <p>
+                Trading since <strong>2003</strong> , Collins & Co. has evolved from a dedicated team of carpenters into a premier studio specializing in <strong>architectural staircase masterpieces</strong>[cite: 8, 42]. 
+                Founded by Micheal Collins, our firm is built on a personal commitment to high standards, innovation, and the implementation of <strong>cutting-edge techniques</strong>[cite: 9, 32].
+            </p>
+            <p>
+                Based in Munster, we have developed a reputation for excellence across Ireland[cite: 8, 10]. We are committed to pushing the boundaries of design, ensuring that every <strong>bespoke, hand-finished staircase</strong> we create seamlessly integrates into the unique character of your property[cite: 36, 40, 42]. 
+            </p>
+            <p>
+                Our process combines <strong>unrivalled specialist expertise</strong> with an efficiency that ensures every project is delivered with meticulous attention to detail[cite: 9, 10]. We don't just build stairs; we create the centerpiece of your home[cite: 58].
+            </p>
+        </div>
+    </section>
+
+</body>
+</html>
